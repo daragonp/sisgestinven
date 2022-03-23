@@ -20,7 +20,7 @@ class SupplierFactory extends Factory
     {
         return [
             //
-        'name'=>$this->faker->sentence(),
+        'name'=>$this->faker->unique()->name(),
         'phone'=>rand(6010000000, 6019999999),
         'address'=>$this->faker->sentence(),
         ];

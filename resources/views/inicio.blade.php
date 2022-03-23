@@ -67,6 +67,17 @@
                         </center>
                     </div>
                 </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <center><i class="fa-solid fa-table-cells fa-5x"></i>     
+                            <div class="card-body">
+                                <h5 class="card-title">Proveedores</h5>
+                                <h1>{{$suppliers}}</h1>
+                                <a href="/proveedor/suppliers" class="btn btn-primary">Ver proveedores</a>
+                            </div>
+                        </center>
+                    </div>
+                </div>
             
         </div>
     </div>

@@ -57,7 +57,8 @@ class HomeController extends Controller
         $users = DB::table('users')->count();
         $categories = DB::table('categories')->count();
         $products = DB::table('products')->count();
+        $suppliers = DB::table('suppliers')->count();
         //dd($users);
-        return view('inicio', compact('users', 'categories', 'products'));
+        return view('inicio', compact('users', 'categories', 'products', 'suppliers'));
     }
 }

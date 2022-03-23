@@ -58,10 +58,12 @@
     <div id="s_sidebar" class="sidebar">
         <a href="javascript:void(0)" class="botoncerrar" onclick="closeNav()">&times;</a>
         <a href="/">Inicio</a>
-        <a href="/user">Usuarios</a>
-        <a href="/categoria/category">Categorías</a>
-        <a href="/proveedor/suppliers">Proveedores</a>
-        <a href="/producto/products">Productos</a>
+        @if(Auth::user()->rol=='ADMIN')
+            <a href="/user">Usuarios</a>
+            <a href="/categoria/category">Categorías</a>
+            <a href="/proveedor/suppliers">Proveedores</a>
+            <a href="/producto/products">Productos</a>
+        @endif
     </div>
 
     <div id="main">

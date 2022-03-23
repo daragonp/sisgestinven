@@ -16,14 +16,13 @@ use App\Http\Controllers\Admin\HomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['middleware' => ['auth']], function() {
+    // your routes
+
 
 Route::get('/', [HomeController::class, 'contador']);
 
 Route::get('/dashboard', [HomeController::class, 'index']);
-
-Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
-                ->middleware('auth')
-                ->name('logout');
 
 Route::get('/user', [HomeController::class, 'listar_usuarios']);
 
@@ -57,4 +56,10 @@ Route::get('proveedor/update-supplier/{id}', [SupplierController::class, 'update
 Route::post('proveedor/updatesupplier/{id}', [SupplierController::class, 'edit']);
 Route::get('proveedor/delete-supplier/{id}', [SupplierController::class, 'destroy']);
 
+});
+
+Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
+                ->middleware('auth')
+                ->name('logout');
+                
 require __DIR__.'/auth.php';

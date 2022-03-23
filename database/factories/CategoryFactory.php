@@ -22,7 +22,7 @@ class CategoryFactory extends Factory
     {
         return [
             //
-            'name'=>$this->faker->sentence(),
+            'name'=>$this->faker->unique()->name(),
         ];
     }
 }

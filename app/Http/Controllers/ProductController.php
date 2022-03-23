@@ -48,7 +48,7 @@ class ProductController extends Controller
 
         $image = $request->image;
         $imageName = time().'.'.$image->getClientOriginalExtension();
-        $request->image->move('storage/images', $imageName);
+        $request->image->move('storage/products/images', $imageName);
 
         $datosproducto->image = $imageName;
         $datosproducto->name = $request->name;
@@ -93,7 +93,7 @@ class ProductController extends Controller
 
        if($image){
            $imageName = time().'.'.$image->getClientOriginalExtension();
-           $request->image->move('storage/images', $imageName);
+           $request->image->move('storage/products/images', $imageName);
             $producto->image = $imageName;
        }
 

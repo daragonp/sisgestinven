@@ -20,8 +20,8 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
-            'image' => $this->faker->image('public/storage/images',300,250, null, false),
+            'name' => $this->faker->unique()->sentence(),
+            'image' => $this->faker->image('public/storage/products',300,250, null, false),
             'category_id'=>rand(1, 20),
             'supplier_id'=>rand(1, 50),
             'qty'=>rand(1, 1500),

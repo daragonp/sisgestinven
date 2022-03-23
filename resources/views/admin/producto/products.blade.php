@@ -50,7 +50,7 @@
                         @foreach($listado as $producto)
                             <tbody>
                                 <tr>
-                                    <td> <img src="/storage/images/{{$producto->image}}" alt="" width="100px;"> </td>
+                                    <td> <img src="/storage/products/{{$producto->image}}" alt="" width="100px;"> </td>
                                     <td>{{$producto->name}}</td>
                                     <td>{{$producto->category->name}}</td>
                                     <td>{{$producto->supplier_id}}</td>
